@@ -47,7 +47,7 @@ Update your local configuration:
 ```yaml
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/my_db
+    url: jdbc:mysql://localhost:3306/interviewfox
     username: root
     password: your_password
 
