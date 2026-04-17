@@ -32,10 +32,9 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * ${dataName}服务实现
+ * ${dataName} service Impl
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://www.code-nav.cn">编程导航学习圈</a>
+* @author berlinxu
  */
 @Service
 @Slf4j
