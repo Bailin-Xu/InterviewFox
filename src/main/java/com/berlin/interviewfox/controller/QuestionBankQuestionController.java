@@ -1,5 +1,7 @@
 package com.berlin.interviewfox.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.berlin.interviewfox.annotation.AuthCheck;
 import com.berlin.interviewfox.common.BaseResponse;
@@ -11,6 +13,7 @@ import com.berlin.interviewfox.exception.BusinessException;
 import com.berlin.interviewfox.exception.ThrowUtils;
 import com.berlin.interviewfox.model.dto.questionBankQuestion.QuestionBankQuestionAddRequest;
 import com.berlin.interviewfox.model.dto.questionBankQuestion.QuestionBankQuestionQueryRequest;
+import com.berlin.interviewfox.model.dto.questionBankQuestion.QuestionBankQuestionRemoveRequest;
 import com.berlin.interviewfox.model.dto.questionBankQuestion.QuestionBankQuestionUpdateRequest;
 import com.berlin.interviewfox.model.entity.QuestionBankQuestion;
 import com.berlin.interviewfox.model.entity.User;
@@ -202,4 +205,26 @@ public class QuestionBankQuestionController {
     }
 
     // endregion
+
+    /**
+     * 删除questionBankQuestion
+     *
+     * @param questionBankQuestionRemoveRequest
+     * @return
+     */
+    @PostMapping("/delete")
+    public BaseResponse<Boolean> removeQuestionBankQuestion(
+            @RequestBody QuestionBankQuestionRemoveRequest questionBankQuestionRemoveRequest
+    ) {
+        ThrowUtils.throwIf(questionBankQuestionRemoveRequest == null, ErrorCode.PARAMS_ERROR);
+
+        Long questionBankId = questionBankQuestionRemoveRequest.getQuestionBankId();
+        Long questionId = questionBankQuestionRemoveRequest.getQuestionId();
+        LambdaQueryWrapper<QuestionBankQuestion> lambdaQueryWrapper = Wrappers.lambdaQuery(QuestionBankQuestion.class)
+                .eq(QuestionBankQuestion::getQuestionBankId, questionBankId)
+                .eq(QuestionBankQuestion::getQuestionId, questionId);
+        boolean result = questionBankQuestionService.remove(lambdaQueryWrapper);
+        return ResultUtils.success(result);
+    }
+
 }

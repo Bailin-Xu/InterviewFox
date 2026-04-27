@@ -6,14 +6,19 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.berlin.interviewfox.common.ErrorCode;
 import com.berlin.interviewfox.constant.CommonConstant;
+import com.berlin.interviewfox.exception.BusinessException;
 import com.berlin.interviewfox.exception.ThrowUtils;
 import com.berlin.interviewfox.mapper.QuestionBankQuestionMapper;
 import com.berlin.interviewfox.model.dto.questionBankQuestion.QuestionBankQuestionQueryRequest;
+import com.berlin.interviewfox.model.entity.Question;
+import com.berlin.interviewfox.model.entity.QuestionBank;
 import com.berlin.interviewfox.model.entity.QuestionBankQuestion;
 import com.berlin.interviewfox.model.entity.User;
 import com.berlin.interviewfox.model.vo.QuestionBankQuestionVO;
 import com.berlin.interviewfox.model.vo.UserVO;
 import com.berlin.interviewfox.service.QuestionBankQuestionService;
+import com.berlin.interviewfox.service.QuestionBankService;
+import com.berlin.interviewfox.service.QuestionService;
 import com.berlin.interviewfox.service.UserService;
 import com.berlin.interviewfox.utils.SqlUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -39,6 +44,12 @@ public class QuestionBankQuestionServiceImpl extends ServiceImpl<QuestionBankQue
     @Resource
     private UserService userService;
 
+    @Resource
+    private QuestionService questionService;
+
+    @Resource
+    private QuestionBankService questionBankService;
+
     /**
      * 校验数据
      *
@@ -48,6 +59,21 @@ public class QuestionBankQuestionServiceImpl extends ServiceImpl<QuestionBankQue
     @Override
     public void validQuestionBankQuestion(QuestionBankQuestion questionBankQuestion, boolean add) {
         ThrowUtils.throwIf(questionBankQuestion == null, ErrorCode.PARAMS_ERROR);
+
+        Long questionId = questionBankQuestion.getQuestionId();
+        if (questionId != null) {
+            Question question = questionService.getById(questionId);
+            if (question == null) {
+                throw new BusinessException(ErrorCode.NOT_FOUND_ERROR, "question not found");
+            }
+        }
+        Long questionBankId = questionBankQuestion.getQuestionBankId();
+        if (questionBankId != null) {
+            QuestionBank questionBank = questionBankService.getById(questionBankId);
+            if (questionBank == null) {
+                throw new BusinessException(ErrorCode.NOT_FOUND_ERROR, "question bank not found");
+            }
+        }
 //        // todo 从对象中取值
 //        String title = questionBankQuestion.getTitle();
 //        // 创建数据时，参数不能为空

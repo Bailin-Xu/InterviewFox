@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 查询questionBank请求
  *
-* @author berlinxu
+ * @author berlinxu
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -45,6 +45,11 @@ public class QuestionBankQueryRequest extends PageRequest implements Serializabl
      * 图片
      */
     private String picture;
+
+    /**
+     * 是否要关联查询题目列表
+     */
+    private boolean needQueryQuestionList;
 
     /**
      * 创建用户 id
