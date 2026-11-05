@@ -207,12 +207,12 @@ public class QuestionBankQuestionController {
     // endregion
 
     /**
-     * 删除questionBankQuestion
+     * 从题库中移除题目
      *
      * @param questionBankQuestionRemoveRequest
      * @return
      */
-    @PostMapping("/delete")
+    @PostMapping("/remove")
     public BaseResponse<Boolean> removeQuestionBankQuestion(
             @RequestBody QuestionBankQuestionRemoveRequest questionBankQuestionRemoveRequest
     ) {
@@ -220,6 +220,8 @@ public class QuestionBankQuestionController {
 
         Long questionBankId = questionBankQuestionRemoveRequest.getQuestionBankId();
         Long questionId = questionBankQuestionRemoveRequest.getQuestionId();
+        ThrowUtils.throwIf(questionBankId == null || questionBankId <= 0, ErrorCode.PARAMS_ERROR);
+        ThrowUtils.throwIf(questionId == null || questionId <= 0, ErrorCode.PARAMS_ERROR);
         LambdaQueryWrapper<QuestionBankQuestion> lambdaQueryWrapper = Wrappers.lambdaQuery(QuestionBankQuestion.class)
                 .eq(QuestionBankQuestion::getQuestionBankId, questionBankId)
                 .eq(QuestionBankQuestion::getQuestionId, questionId);

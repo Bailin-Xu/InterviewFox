@@ -13,6 +13,7 @@ import com.berlin.interviewfox.common.ResultUtils;
 import com.berlin.interviewfox.constant.CommonConstant;
 import com.berlin.interviewfox.constant.UserConstant;
 import com.berlin.interviewfox.exception.ThrowUtils;
+import com.berlin.interviewfox.mapper.QuestionBankQuestionMapper;
 import com.berlin.interviewfox.mapper.QuestionMapper;
 import com.berlin.interviewfox.model.dto.question.QuestionQueryRequest;
 import com.berlin.interviewfox.model.entity.Question;
@@ -20,7 +21,6 @@ import com.berlin.interviewfox.model.entity.QuestionBankQuestion;
 import com.berlin.interviewfox.model.entity.User;
 import com.berlin.interviewfox.model.vo.QuestionVO;
 import com.berlin.interviewfox.model.vo.UserVO;
-import com.berlin.interviewfox.service.QuestionBankQuestionService;
 import com.berlin.interviewfox.service.QuestionService;
 import com.berlin.interviewfox.service.UserService;
 import com.berlin.interviewfox.utils.SqlUtils;
@@ -29,7 +29,6 @@ import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -51,7 +50,7 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
     private UserService userService;
 
     @Resource
-    private QuestionBankQuestionService questionBankQuestionService;
+    private QuestionBankQuestionMapper questionBankQuestionMapper;
 
     /**
      * 校验数据
@@ -218,11 +217,11 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
                     .select(QuestionBankQuestion::getQuestionId)
                     .eq(QuestionBankQuestion::getQuestionBankId, questionBankId);
 
-            List<QuestionBankQuestion> questionList = questionBankQuestionService.list(lambdaQueryWrapper);
+            List<QuestionBankQuestion> questionList = questionBankQuestionMapper.selectList(lambdaQueryWrapper);
             if (CollUtil.isNotEmpty(questionList)) {
                 //类型转换 取出题目 id 集合
                 Set<Long> questionIdSet = questionList.stream()
-                        .map(QuestionBankQuestion::getQuestionBankId)
+                        .map(QuestionBankQuestion::getQuestionId)
                         .collect(Collectors.toSet());
 
                 queryWrapper.in("id", questionIdSet);
