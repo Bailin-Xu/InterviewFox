@@ -1,0 +1,34 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0,
+    "analysis": {
+      "analyzer": {
+        "question_text": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": ["lowercase", "asciifolding"]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic": "strict",
+    "properties": {
+      "id": {"type": "long"},
+      "title": {
+        "type": "text",
+        "analyzer": "question_text",
+        "fields": {"raw": {"type": "keyword"}}
+      },
+      "content": {"type": "text", "analyzer": "question_text"},
+      "answer": {"type": "text", "analyzer": "question_text"},
+      "tags": {"type": "keyword"},
+      "userId": {"type": "long"},
+      "editTime": {"type": "date"},
+      "createTime": {"type": "date"},
+      "updateTime": {"type": "date"},
+      "isDelete": {"type": "byte"}
+    }
+  }
+}
