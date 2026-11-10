@@ -149,6 +149,11 @@ including soft deletes. Operations such as `TRUNCATE` require rebuilding the ind
 
 Run the API regression tests with `mvn -Dtest=QuestionSearchControllerTest test`.
 
+The [search benchmark](benchmarks/search/README.md) generates 50,000 synthetic
+questions and compares the two HTTP paths in isolated Docker containers. It
+retains the dataset, correctness checks, per-request timings, resource settings
+and repeated-round metrics, with a separate record of the overload pilot.
+
 ## 📌 Notes
 
 * Redis is required for login session

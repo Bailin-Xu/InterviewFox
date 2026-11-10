@@ -1,0 +1,20 @@
+MySQL ready
+Elasticsearch ready
+50000-row database imported
+Full sync and initial drain complete
+Verified counts and ordered IDs for all 72 queries
+{"requests": 400, "successes": 400, "errors": 0, "p50_ms": 42143.02650000002, "p95_ms": 76135.85300000003, "p99_ms": 77844.83445800004, "mean_ms": 41295.48698509502, "http_p95_ms": 5619.301250000007, "queue_p95_ms": 72597.26800000001, "engine": "mysql", "rate": 20, "round": 1, "elapsed_seconds": 97.769795125, "achieved_rps": 4.0912431031342}
+{"requests": 400, "successes": 400, "errors": 0, "p50_ms": 21.609707999971306, "p95_ms": 31.05316699998184, "p99_ms": 35.96458300000904, "mean_ms": 21.649738209984264, "http_p95_ms": 23.64799999998013, "queue_p95_ms": 10.176416999968296, "engine": "elasticsearch", "rate": 20, "round": 1, "elapsed_seconds": 19.976385499999992, "achieved_rps": 20.023642415190682}
+{"requests": 400, "successes": 400, "errors": 0, "p50_ms": 19.804582999938702, "p95_ms": 28.373415999965346, "p99_ms": 32.03212499994379, "mean_ms": 19.771830612463077, "http_p95_ms": 19.86291700001175, "queue_p95_ms": 10.127665999959845, "engine": "elasticsearch", "rate": 20, "round": 2, "elapsed_seconds": 19.97056433299997, "achieved_rps": 20.02947905378056}
+Traceback (most recent call last):
+  File "/Users/berlinxu/IdeaProjects/InterviewFox/benchmarks/search/run.py", line 420, in <module>
+    
+  File "/Users/berlinxu/IdeaProjects/InterviewFox/benchmarks/search/run.py", line 397, in main
+    order = ["mysql", "elasticsearch"] if number % 2 == 0 else ["elasticsearch", "mysql"]
+  File "/Users/berlinxu/IdeaProjects/InterviewFox/benchmarks/search/run.py", line 297, in run_round
+    for future in futures:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 440, in result
+    self._condition.wait(timeout)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 312, in wait
+    waiter.acquire()
+KeyboardInterrupt

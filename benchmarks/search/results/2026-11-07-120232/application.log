@@ -1,0 +1,44 @@
+by 程序员鱼皮：https://github.com/liyupi
+可能是最好的编程学习圈子：https://yupi.icu
+
+2026-11-07 12:02:42.696  INFO 38722 --- [           main] com.berlin.interviewfox.MainApplication  : Starting MainApplication v0.0.1-SNAPSHOT using Java 11.0.30 on Berlins-MacBook-Air.local with PID 38722 (/Users/berlinxu/IdeaProjects/InterviewFox/target/interviewFox-backend-0.0.1-SNAPSHOT.jar started by berlinxu in /Users/berlinxu/IdeaProjects/InterviewFox)
+2026-11-07 12:02:42.697  INFO 38722 --- [           main] com.berlin.interviewfox.MainApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-11-07 12:02:43.069  INFO 38722 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-07 12:02:43.070  INFO 38722 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2026-11-07 12:02:43.157  INFO 38722 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 1 Elasticsearch repository interfaces.
+2026-11-07 12:02:43.159  INFO 38722 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-07 12:02:43.160  INFO 38722 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2026-11-07 12:02:43.162  INFO 38722 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.berlin.interviewfox.esdao.PostEsDao; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2026-11-07 12:02:43.163  INFO 38722 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2026-11-07 12:02:43.169  INFO 38722 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-07 12:02:43.169  INFO 38722 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-07 12:02:43.175  INFO 38722 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.berlin.interviewfox.esdao.PostEsDao; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-07 12:02:43.175  INFO 38722 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2026-11-07 12:02:43.248  WARN 38722 --- [           main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.berlin.interviewfox.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2026-11-07 12:02:43.248  WARN 38722 --- [           main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'questionBankMapper' and 'com.berlin.interviewfox.mapper.QuestionBankMapper' mapperInterface. Bean already defined with the same name!
+2026-11-07 12:02:43.248  WARN 38722 --- [           main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'questionBankQuestionMapper' and 'com.berlin.interviewfox.mapper.QuestionBankQuestionMapper' mapperInterface. Bean already defined with the same name!
+2026-11-07 12:02:43.248  WARN 38722 --- [           main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'postFavourMapper' and 'com.berlin.interviewfox.mapper.PostFavourMapper' mapperInterface. Bean already defined with the same name!
+2026-11-07 12:02:43.248  WARN 38722 --- [           main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'postMapper' and 'com.berlin.interviewfox.mapper.PostMapper' mapperInterface. Bean already defined with the same name!
+2026-11-07 12:02:43.248  WARN 38722 --- [           main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'postThumbMapper' and 'com.berlin.interviewfox.mapper.PostThumbMapper' mapperInterface. Bean already defined with the same name!
+2026-11-07 12:02:43.248  WARN 38722 --- [           main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'questionMapper' and 'com.berlin.interviewfox.mapper.QuestionMapper' mapperInterface. Bean already defined with the same name!
+2026-11-07 12:02:43.248  WARN 38722 --- [           main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.berlin.interviewfox.mapper]' package. Please check your configuration.
+2026-11-07 12:02:43.603  INFO 38722 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 58599 (http)
+2026-11-07 12:02:43.609  INFO 38722 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-07 12:02:43.609  INFO 38722 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2026-11-07 12:02:43.656  INFO 38722 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2026-11-07 12:02:43.656  INFO 38722 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 927 ms
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.5.2 
+2026-11-07 12:02:45.180  INFO 38722 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 58599 (http) with context path '/api'
+2026-11-07 12:02:45.187  INFO 38722 --- [           main] com.berlin.interviewfox.MainApplication  : Started MainApplication in 2.766 seconds (JVM running for 3.083)
+2026-11-07 12:02:45.188  INFO 38722 --- [   scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-07 12:02:45.328  INFO 38722 --- [   scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-07 12:02:45.666  INFO 38722 --- [   scheduling-1] c.b.i.service.search.QuestionIndexSync   : Starting full question sync for index ovDPMYRcStqDZFDfvizWzA
+2026-11-07 12:02:46.209  INFO 38722 --- [.1-58599-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-07 12:02:46.209  INFO 38722 --- [.1-58599-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-07 12:02:46.210  INFO 38722 --- [.1-58599-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-07 12:04:39.294  INFO 38722 --- [   scheduling-1] c.b.i.service.search.QuestionIndexSync   : Question Elasticsearch index is ready
+2026-11-07 12:11:55.526  INFO 38722 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-07 12:11:55.529  INFO 38722 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -1,0 +1,84 @@
+{
+  "started_at": "2026-11-07T12:02:33.974912-05:00",
+  "source_commit": "729a66234675e4c1a3f28d38468a35053c3ae645",
+  "source_dirty": true,
+  "jar_sha256": "6f74174b34f9cd33978ab5946790d952f6ccff9602d5141a65ecb54640b813fd",
+  "platform": "macOS-15.7.9-arm64-arm-64bit",
+  "architecture": "arm64",
+  "python": "3.9.6",
+  "java": "openjdk version \"11.0.30\" 2026-01-20\nOpenJDK Runtime Environment Homebrew (build 11.0.30+0)\nOpenJDK 64-Bit Server VM Homebrew (build 11.0.30+0, mixed mode)",
+  "docker": {
+    "cpus": 8,
+    "memory": 8218316800,
+    "version": "28.1.1"
+  },
+  "settings": {
+    "rates": [
+      2,
+      3
+    ],
+    "seconds": 30,
+    "rounds": 3,
+    "workers": 16,
+    "warmup_per_engine": 100,
+    "container_cpus_each": 2,
+    "container_memory_each": "2g",
+    "mysql_buffer_pool": "512MiB",
+    "es_heap": "768MiB",
+    "application_heap": "768MiB",
+    "hikari_pool": 16,
+    "es_shards": 1,
+    "es_replicas": 0,
+    "arrival_model": "fixed-rate",
+    "latency_definition": "scheduled request time through JSON response validation, including client queue wait",
+    "percentile": "nearest rank over successful requests; errors reported separately"
+  },
+  "dataset": {
+    "rows": 50000,
+    "authors": 64,
+    "seed": 20261107,
+    "synthetic": true,
+    "row_sha256": "0f037e35ef87bcedcb2e7b3c62b3173e525e06fd65ae0a5a319663be2480e981",
+    "topic_counts": {
+      "redis": 6755,
+      "kafka": 5096,
+      "mysql": 5105,
+      "postgresql": 3361,
+      "elasticsearch": 3401,
+      "docker": 3391,
+      "kubernetes": 2539,
+      "spring": 4227,
+      "kotlin": 2521,
+      "python": 3411,
+      "rabbitmq": 1709,
+      "mongodb": 1638,
+      "nginx": 1702,
+      "terraform": 1748,
+      "prometheus": 1660,
+      "grpc": 1736
+    },
+    "content_bytes_mean": 1163.33054,
+    "content_bytes_min": 685,
+    "content_bytes_max": 1655,
+    "cases": 72
+  },
+  "mysql_version": "8.4.13",
+  "elasticsearch_version": "7.17.4",
+  "containers": [
+    {
+      "image": "mysql:8.4",
+      "image_id": "sha256:a81d043930e51745522bd5c430961cf8286f0a23f0a9a2a6e0108f7ea71b0902",
+      "nano_cpus": 2000000000,
+      "memory_bytes": 2147483648
+    },
+    {
+      "image": "docker.elastic.co/elasticsearch/elasticsearch:7.17.4",
+      "image_id": "sha256:b3fed35f7a43a3e16aa037bf9c8cb8139d1eec879ab5616f3c20746484de4010",
+      "nano_cpus": 2000000000,
+      "memory_bytes": 2147483648
+    }
+  ],
+  "harness_sha256": "f4eead988e9df4e18b2c3c6871b3ef071d51ade3c7d77d26d393011e611cc488",
+  "host_memory_bytes": 17179869184,
+  "host_logical_cpus": 8
+}

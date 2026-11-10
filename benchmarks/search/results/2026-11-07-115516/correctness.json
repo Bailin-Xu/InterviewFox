@@ -1,0 +1,362 @@
+[
+  {
+    "case": "redis-all",
+    "total": 6755,
+    "ids_equal": true
+  },
+  {
+    "case": "redis-beginner",
+    "total": 2289,
+    "ids_equal": true
+  },
+  {
+    "case": "redis-intermediate",
+    "total": 2212,
+    "ids_equal": true
+  },
+  {
+    "case": "redis-advanced",
+    "total": 2254,
+    "ids_equal": true
+  },
+  {
+    "case": "kafka-all",
+    "total": 5096,
+    "ids_equal": true
+  },
+  {
+    "case": "kafka-beginner",
+    "total": 1653,
+    "ids_equal": true
+  },
+  {
+    "case": "kafka-intermediate",
+    "total": 1756,
+    "ids_equal": true
+  },
+  {
+    "case": "kafka-advanced",
+    "total": 1687,
+    "ids_equal": true
+  },
+  {
+    "case": "mysql-all",
+    "total": 5105,
+    "ids_equal": true
+  },
+  {
+    "case": "mysql-beginner",
+    "total": 1717,
+    "ids_equal": true
+  },
+  {
+    "case": "mysql-intermediate",
+    "total": 1708,
+    "ids_equal": true
+  },
+  {
+    "case": "mysql-advanced",
+    "total": 1680,
+    "ids_equal": true
+  },
+  {
+    "case": "postgresql-all",
+    "total": 3361,
+    "ids_equal": true
+  },
+  {
+    "case": "postgresql-beginner",
+    "total": 1122,
+    "ids_equal": true
+  },
+  {
+    "case": "postgresql-intermediate",
+    "total": 1033,
+    "ids_equal": true
+  },
+  {
+    "case": "postgresql-advanced",
+    "total": 1206,
+    "ids_equal": true
+  },
+  {
+    "case": "elasticsearch-all",
+    "total": 3401,
+    "ids_equal": true
+  },
+  {
+    "case": "elasticsearch-beginner",
+    "total": 1143,
+    "ids_equal": true
+  },
+  {
+    "case": "elasticsearch-intermediate",
+    "total": 1153,
+    "ids_equal": true
+  },
+  {
+    "case": "elasticsearch-advanced",
+    "total": 1105,
+    "ids_equal": true
+  },
+  {
+    "case": "docker-all",
+    "total": 3391,
+    "ids_equal": true
+  },
+  {
+    "case": "docker-beginner",
+    "total": 1155,
+    "ids_equal": true
+  },
+  {
+    "case": "docker-intermediate",
+    "total": 1115,
+    "ids_equal": true
+  },
+  {
+    "case": "docker-advanced",
+    "total": 1121,
+    "ids_equal": true
+  },
+  {
+    "case": "kubernetes-all",
+    "total": 2539,
+    "ids_equal": true
+  },
+  {
+    "case": "kubernetes-beginner",
+    "total": 810,
+    "ids_equal": true
+  },
+  {
+    "case": "kubernetes-intermediate",
+    "total": 866,
+    "ids_equal": true
+  },
+  {
+    "case": "kubernetes-advanced",
+    "total": 863,
+    "ids_equal": true
+  },
+  {
+    "case": "spring-all",
+    "total": 4227,
+    "ids_equal": true
+  },
+  {
+    "case": "spring-beginner",
+    "total": 1444,
+    "ids_equal": true
+  },
+  {
+    "case": "spring-intermediate",
+    "total": 1384,
+    "ids_equal": true
+  },
+  {
+    "case": "spring-advanced",
+    "total": 1399,
+    "ids_equal": true
+  },
+  {
+    "case": "kotlin-all",
+    "total": 2521,
+    "ids_equal": true
+  },
+  {
+    "case": "kotlin-beginner",
+    "total": 839,
+    "ids_equal": true
+  },
+  {
+    "case": "kotlin-intermediate",
+    "total": 829,
+    "ids_equal": true
+  },
+  {
+    "case": "kotlin-advanced",
+    "total": 853,
+    "ids_equal": true
+  },
+  {
+    "case": "python-all",
+    "total": 3411,
+    "ids_equal": true
+  },
+  {
+    "case": "python-beginner",
+    "total": 1097,
+    "ids_equal": true
+  },
+  {
+    "case": "python-intermediate",
+    "total": 1162,
+    "ids_equal": true
+  },
+  {
+    "case": "python-advanced",
+    "total": 1152,
+    "ids_equal": true
+  },
+  {
+    "case": "rabbitmq-all",
+    "total": 1709,
+    "ids_equal": true
+  },
+  {
+    "case": "rabbitmq-beginner",
+    "total": 562,
+    "ids_equal": true
+  },
+  {
+    "case": "rabbitmq-intermediate",
+    "total": 572,
+    "ids_equal": true
+  },
+  {
+    "case": "rabbitmq-advanced",
+    "total": 575,
+    "ids_equal": true
+  },
+  {
+    "case": "mongodb-all",
+    "total": 1638,
+    "ids_equal": true
+  },
+  {
+    "case": "mongodb-beginner",
+    "total": 564,
+    "ids_equal": true
+  },
+  {
+    "case": "mongodb-intermediate",
+    "total": 515,
+    "ids_equal": true
+  },
+  {
+    "case": "mongodb-advanced",
+    "total": 559,
+    "ids_equal": true
+  },
+  {
+    "case": "nginx-all",
+    "total": 1702,
+    "ids_equal": true
+  },
+  {
+    "case": "nginx-beginner",
+    "total": 566,
+    "ids_equal": true
+  },
+  {
+    "case": "nginx-intermediate",
+    "total": 561,
+    "ids_equal": true
+  },
+  {
+    "case": "nginx-advanced",
+    "total": 575,
+    "ids_equal": true
+  },
+  {
+    "case": "terraform-all",
+    "total": 1748,
+    "ids_equal": true
+  },
+  {
+    "case": "terraform-beginner",
+    "total": 591,
+    "ids_equal": true
+  },
+  {
+    "case": "terraform-intermediate",
+    "total": 603,
+    "ids_equal": true
+  },
+  {
+    "case": "terraform-advanced",
+    "total": 554,
+    "ids_equal": true
+  },
+  {
+    "case": "prometheus-all",
+    "total": 1660,
+    "ids_equal": true
+  },
+  {
+    "case": "prometheus-beginner",
+    "total": 551,
+    "ids_equal": true
+  },
+  {
+    "case": "prometheus-intermediate",
+    "total": 538,
+    "ids_equal": true
+  },
+  {
+    "case": "prometheus-advanced",
+    "total": 571,
+    "ids_equal": true
+  },
+  {
+    "case": "grpc-all",
+    "total": 1736,
+    "ids_equal": true
+  },
+  {
+    "case": "grpc-beginner",
+    "total": 583,
+    "ids_equal": true
+  },
+  {
+    "case": "grpc-intermediate",
+    "total": 556,
+    "ids_equal": true
+  },
+  {
+    "case": "grpc-advanced",
+    "total": 597,
+    "ids_equal": true
+  },
+  {
+    "case": "missing-0",
+    "total": 0,
+    "ids_equal": true
+  },
+  {
+    "case": "missing-1",
+    "total": 0,
+    "ids_equal": true
+  },
+  {
+    "case": "missing-2",
+    "total": 0,
+    "ids_equal": true
+  },
+  {
+    "case": "missing-3",
+    "total": 0,
+    "ids_equal": true
+  },
+  {
+    "case": "missing-4",
+    "total": 0,
+    "ids_equal": true
+  },
+  {
+    "case": "missing-5",
+    "total": 0,
+    "ids_equal": true
+  },
+  {
+    "case": "missing-6",
+    "total": 0,
+    "ids_equal": true
+  },
+  {
+    "case": "missing-7",
+    "total": 0,
+    "ids_equal": true
+  }
+]
